@@ -1,3 +1,5 @@
 Embeds album artwork located by Banshee on Ubuntu into a library of MP3 files.
 
 This is a simple Python script which scans a directory tree for MP3 files, reads their metadata and attempts to look-up the album artwork for each file from the cache populated when tracks are imported into Banshee. If the album artwork for a given file is found in the cache, the image is embeded into the MP3 file as the front cover artwork, unless the file already has a front cover image, in which case the no changes are made.
+
+Based on a thread on askubuntu.com using key information provided by Oli: http://askubuntu.com/questions/65323/bulk-export-embed-album-art-in-banshee/85297
