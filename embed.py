@@ -62,8 +62,6 @@ def findMP3Files(dir = "."):
     return mp3s
 
 def hasEmbeddedArtwork(tag):
-    #tag.removeImages();
-    #return 0;
     return len(tag.getImages())
 
 def findAlbumArtworkFile(tag):
