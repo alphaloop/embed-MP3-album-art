@@ -1,5 +1,10 @@
-Embeds album artwork located by Banshee on Ubuntu into a library of MP3 files.
+Embeds album artwork, located using the Music Brainz and Cover Art Archive APIs, into a library of MP3 files using ID3 metadata tags.
 
-This is a simple Python script which scans a directory tree for MP3 files, reads their metadata and attempts to look-up the album artwork for each file from the cache populated when tracks are imported into Banshee. If the album artwork for a given file is found in the cache, the image is embeded into the MP3 file as the front cover artwork, unless the file already has a front cover image, in which case the no changes are made.
+This is a Python script which scans a directory tree for MP3 files, reads their metadata and attempts to look-up the album cover for any files that don't have one from the Music Brainz and Cover Art Archive APIs. If the album artwork for a given file is found, the image is embeded into the MP3 file as the front cover artwork. No changes are made to files that already have a front cover image.
 
-Based on a thread on askubuntu.com using key information provided by Oli: http://askubuntu.com/questions/65323/bulk-export-embed-album-art-in-banshee/85297
+Installation
+The script has been tested with Python 2.7.12 and requires the musicbrainzngs and eyed3 Python libraries, which can be installed using pip as follows:
+$ pip install musicbrainzngs eyeD3
+
+Usage
+$ ./embed.py <path to root MP3 directory>
