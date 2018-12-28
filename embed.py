@@ -2,7 +2,7 @@
 
 import os, sys, glob, eyed3, hashlib
 import musicbrainzngs as mb
-import Image
+from PIL import Image
 
 CACHE_FILE_PREFIX = '/tmp/embed'
 IMAGE_SIZE = 300, 300
